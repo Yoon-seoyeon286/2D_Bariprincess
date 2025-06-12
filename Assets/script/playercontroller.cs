@@ -1,0 +1,121 @@
+using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class playercontroller : MonoBehaviour
+{
+
+    //run
+    public float speed = 8f;
+
+
+    //jump
+    public float jumpCount = 0;
+    bool isGrounded = false;
+    public float jumpForce = 100f;
+
+
+
+    //Dead
+    bool isDead = false;
+
+    //etc
+    Rigidbody2D rb;
+    Animator animator;
+    public AudioClip deathclip;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
+    }
+
+
+    void Update()
+    {
+
+        if (isDead)
+        {
+            return;
+        }
+
+        float xInput = Input.GetAxis("Horizontal");
+
+        if (isGrounded)
+        {
+            if (xInput != 0)
+            {
+                
+                rb.linearVelocity = new Vector2(xInput * speed, rb.linearVelocity.y);
+                animator.SetBool("Run", true);
+            }
+
+            else
+            {
+                animator.SetBool("Run", false);
+            }
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(xInput * 1.2f, rb.linearVelocity.y);
+        }
+
+
+
+
+        animator.SetBool("Jump", !isGrounded);
+    }
+
+
+    public void Jump()
+    {
+        if (jumpCount >= 2) return;
+
+        jumpCount++;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(new Vector2(0, jumpForce));
+
+
+        if (rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = rb.linearVelocity * 0.5f;
+        }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.contacts[0].normal.y > 0.7f)
+        {
+            isGrounded = true;
+            jumpCount = 0;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
+
+
+    void Die()
+    {
+        animator.SetTrigger("Dead");
+        rb.linearVelocity = Vector2.zero;
+        isDead = true;
+
+        SceneManager.LoadScene("01Scene");
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Dead" && !isDead)
+        {
+            Die();
+        }
+    }
+
+
+}
+

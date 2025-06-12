@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: 1sky
     uniqueID: 4049683829
+    locked: 0
+  - name: backbackground
+    uniqueID: 1150661445
     locked: 0
   - name: backgroound
     uniqueID: 771854111
