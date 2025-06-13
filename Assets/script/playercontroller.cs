@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using Microsoft.Unity.VisualStudio.Editor;
+using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,17 +21,19 @@ public class playercontroller : MonoBehaviour
     bool isDead = false;
 
     //HP
-
     int HP = 90;
-    int Damage = 15;
-     public HPBar hPBar;
+    public HPBar hPBar;
     int AttackCount = 0;
-  
+
+    //Attack
+    public Bee bee;
+
 
     //etc
     Rigidbody2D rb;
     Animator animator;
     public AudioClip deathclip;
+    
 
     void Start()
     {
@@ -57,7 +60,7 @@ public class playercontroller : MonoBehaviour
         {
             if (xInput != 0)
             {
-                
+
                 rb.linearVelocity = new Vector2(xInput * speed, rb.linearVelocity.y);
                 animator.SetBool("Run", true);
             }
@@ -148,10 +151,27 @@ public class playercontroller : MonoBehaviour
             if (4 < AttackCount && AttackCount <= 6)
             {
                 hPBar.DamageHeart3();
-                Die();
+                Invoke("Die", 1f);
             }
-        
+
         }
+    }
+
+    public void onAttack()
+    {
+        animator.SetTrigger("Attack");
+
+        Vector2 diff = bee.transform.position - transform.position;
+
+        if (bee.gameObject != null)
+        {
+
+            if ( diff.magnitude <= 1.5f)
+            {
+                bee.hitSlide(15);
+            }
+        }
+        
     }
 
 
