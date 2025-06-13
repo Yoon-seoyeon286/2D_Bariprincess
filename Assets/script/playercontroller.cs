@@ -1,6 +1,8 @@
 using System.Security.Cryptography;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class playercontroller : MonoBehaviour
 {
@@ -14,10 +16,16 @@ public class playercontroller : MonoBehaviour
     bool isGrounded = false;
     public float jumpForce = 100f;
 
-
-
     //Dead
     bool isDead = false;
+
+    //HP
+
+    int HP = 90;
+    int Damage = 15;
+     public HPBar hPBar;
+    int AttackCount = 0;
+  
 
     //etc
     Rigidbody2D rb;
@@ -28,6 +36,9 @@ public class playercontroller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        HP = 90;
+        AttackCount = 0;
 
     }
 
@@ -99,7 +110,7 @@ public class playercontroller : MonoBehaviour
     }
 
 
-    void Die()
+    public void Die()
     {
         animator.SetTrigger("Dead");
         rb.linearVelocity = Vector2.zero;
@@ -118,6 +129,28 @@ public class playercontroller : MonoBehaviour
         if (collision.tag == "Finish")
         {
             SceneManager.LoadScene("02Scene");
+        }
+
+        if (collision.tag == "Enemy")
+        {
+            AttackCount++;
+
+            if (AttackCount <= 2)
+            {
+                hPBar.DamageHeart1();
+            }
+
+            if (2 < AttackCount && AttackCount <= 4)
+            {
+                hPBar.DamageHeart2();
+            }
+
+            if (4 < AttackCount && AttackCount <= 6)
+            {
+                hPBar.DamageHeart3();
+                Die();
+            }
+        
         }
     }
 
