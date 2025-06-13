@@ -45,6 +45,12 @@ TagManager:
   - name: sky
     uniqueID: 2065280907
     locked: 0
+  - name: 4sky
+    uniqueID: 1618501111
+    locked: 0
+  - name: 3sky
+    uniqueID: 1458648103
+    locked: 0
   - name: 2sky
     uniqueID: 4043294091
     locked: 0
@@ -62,6 +68,9 @@ TagManager:
     locked: 0
   - name: foreground
     uniqueID: 3464281127
+    locked: 0
+  - name: front
+    uniqueID: 3781403785
     locked: 0
   m_RenderingLayers:
   - Default

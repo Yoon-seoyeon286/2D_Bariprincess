@@ -114,6 +114,11 @@ public class playercontroller : MonoBehaviour
         {
             Die();
         }
+
+        if (collision.tag == "Finish")
+        {
+            SceneManager.LoadScene("02Scene");
+        }
     }
 
 
