@@ -8584,7 +8584,7 @@ MonoBehaviour:
   jumpCount: 0
   jumpForce: 300
   hPBar: {fileID: 1081222625}
-  bee: {fileID: 1885794451}
+  bee: {fileID: 0}
   deathclip: {fileID: 0}
 --- !u!1 &884930992
 GameObject:
@@ -35685,7 +35685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885794446}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 21.4, y: 0.22, z: 0}
   m_LocalScale: {x: 2.84, y: 2.84, z: 2.84}
   m_ConstrainProportionsScale: 1

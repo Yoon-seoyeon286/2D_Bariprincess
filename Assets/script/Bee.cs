@@ -30,7 +30,7 @@ public class Bee : MonoBehaviour
         }
 
         hp -= amount;
-        imgBar.transform.localScale = new Vector2(hp / 250, 0);
+        imgBar.transform.localScale = new Vector3(0.4f*hp / 100f, 0.028f,1f);
 
         if (hp <= 0)
         {

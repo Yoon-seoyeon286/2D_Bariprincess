@@ -26,14 +26,15 @@ public class playercontroller : MonoBehaviour
     int AttackCount = 0;
 
     //Attack
-    public Bee bee;
+    public GameObject bee;
+    Bee beesc;
 
 
     //etc
     Rigidbody2D rb;
     Animator animator;
     public AudioClip deathclip;
-    
+
 
     void Start()
     {
@@ -42,6 +43,8 @@ public class playercontroller : MonoBehaviour
 
         HP = 90;
         AttackCount = 0;
+
+        beesc = FindFirstObjectByType<Bee>();
 
     }
 
@@ -161,14 +164,15 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        Vector2 diff = bee.transform.position - transform.position;
+        
 
-        if (bee.gameObject != null)
+        if (bee != null)
         {
+            Vector2 diff = bee.transform.position - transform.position;
 
-            if ( diff.magnitude <= 1.5f)
+            if (diff.magnitude <= 1.5f)
             {
-                bee.hitSlide(15);
+                beesc.hitSlide(15);
             }
         }
         
