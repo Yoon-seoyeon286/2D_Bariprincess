@@ -26,8 +26,8 @@ public class playercontroller : MonoBehaviour
     int AttackCount = 0;
 
     //Attack
-    public GameObject bee;
-    Bee beesc;
+    Bee bee;
+    public GameObject bees;
 
 
     //etc
@@ -44,7 +44,7 @@ public class playercontroller : MonoBehaviour
         HP = 90;
         AttackCount = 0;
 
-        beesc = FindFirstObjectByType<Bee>();
+        bee =GameObject.FindWithTag("Enemy").GetComponent<Bee>();
 
     }
 
@@ -164,15 +164,14 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        
-
         if (bee != null)
         {
             Vector2 diff = bee.transform.position - transform.position;
 
             if (diff.magnitude <= 1.5f)
             {
-                beesc.hitSlide(15);
+                bee.hitSlide(15);
+
             }
         }
         
