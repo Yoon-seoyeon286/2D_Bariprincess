@@ -12,7 +12,6 @@ public class playercontroller : MonoBehaviour
     //run
     public float speed = 8f;
 
-
     //jump
     public float jumpCount = 0;
     bool isGrounded = false;
@@ -35,6 +34,8 @@ public class playercontroller : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     public AudioClip deathclip;
+
+    //Level
 
 
     void Start()
@@ -177,7 +178,7 @@ public class playercontroller : MonoBehaviour
                 Bee bee = hit.GetComponent<Bee>();
                 if (bee != null)
                 {
-                    bee.hitSlide(15);
+                    bee.hitSlide(25);
                 }
             }
         }

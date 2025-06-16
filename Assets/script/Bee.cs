@@ -8,14 +8,14 @@ public class Bee : MonoBehaviour
     public playercontroller player;
     public RawImage imgBar;
     int hp = 100;
-    static int level;
+
+    Level level;
 
 
     void Start()
     {
         animator = GetComponent<Animator>();
         hp = 100;
-        level = 0;
 
     }
 
@@ -49,9 +49,10 @@ public class Bee : MonoBehaviour
         }
     }
 
-   public void Die()
+    public void Die()
     {
         Destroy(gameObject);
+       
    
     }
 
