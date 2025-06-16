@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: f525c6e6f8ede4d1789d79667b8c5db6
+guid: b1b46e4391fcc4b499b5437877ff6f95
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5420309617620387929
-    second: baribari_0
+      213: -2041049398770351245
+    second: spr_torch_0
+  - first:
+      213: 6669048238204813977
+    second: spr_torch_1
+  - first:
+      213: -9166855071109187563
+    second: spr_torch_2
+  - first:
+      213: -3584869903303768925
+    second: spr_torch_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: baribari_0
+      name: spr_torch_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2560
-        height: 1080
+        x: 6
+        y: 6
+        width: 9
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +150,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a77a1dee1137c4b0800000000000000
-      internalID: -5420309617620387929
+      spriteID: 373c441c26cbca3e0800000000000000
+      internalID: -2041049398770351245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_torch_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 6
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992842cd9083d8c50800000000000000
+      internalID: 6669048238204813977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_torch_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 6
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5187c0381e9c8c080800000000000000
+      internalID: -9166855071109187563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_torch_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4079ff0dbff3ec0800000000000000
+      internalID: -3584869903303768925
       vertices: []
       indices: 
       edges: []
@@ -160,8 +235,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      baribari_0: -5420309617620387929
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
