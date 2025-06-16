@@ -1,4 +1,5 @@
 using System.Security.Cryptography;
+using System.Xml.Serialization;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
@@ -44,7 +45,7 @@ public class playercontroller : MonoBehaviour
         HP = 90;
         AttackCount = 0;
 
-        bee =GameObject.FindWithTag("Enemy").GetComponent<Bee>();
+        bee = FindFirstObjectByType<Bee>();
 
     }
 
@@ -127,17 +128,17 @@ public class playercontroller : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Dead" && !isDead)
+        if (collision.tag == "Dead" && !isDead) //추락 시 사망
         {
             Die();
         }
 
-        if (collision.tag == "Finish")
+        if (collision.tag == "Finish") //골인하면 다음 씬
         {
             SceneManager.LoadScene("02Scene");
         }
 
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Enemy") //닿으면 체력 감소
         {
             AttackCount++;
 
@@ -156,7 +157,6 @@ public class playercontroller : MonoBehaviour
                 hPBar.DamageHeart3();
                 Invoke("Die", 1f);
             }
-
         }
     }
 
@@ -164,17 +164,23 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        if (bee != null)
+    }
+
+    public void DealAttackDamage()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.5f);
+
+        foreach (Collider2D hit in hits)
         {
-            Vector2 diff = bee.transform.position - transform.position;
-
-            if (diff.magnitude <= 1.5f)
+            if (hit.CompareTag("Enemy"))
             {
-                bee.hitSlide(15);
-
+                Bee bee = hit.GetComponent<Bee>();
+                if (bee != null)
+                {
+                    bee.hitSlide(15);
+                }
             }
         }
-        
     }
 
 

@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968503734809578613}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.4, y: 0.22, z: 0}
   m_LocalScale: {x: 2.84, y: 2.84, z: 2.84}
   m_ConstrainProportionsScale: 1
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   imgBar: {fileID: 7045332433443595641}
+  explosion: {fileID: 8638043546000839270, guid: 8fd1a8406e28a4529b98a469f79718c9, type: 3}
 --- !u!1 &1122079492711077074
 GameObject:
   m_ObjectHideFlags: 0
