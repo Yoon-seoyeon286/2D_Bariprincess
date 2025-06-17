@@ -15,7 +15,7 @@ public class BackgroundLoop : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x <= -width)
+        if (transform.position.x <= 22.5f*-width)
         {
             Reposition();
         }
@@ -24,7 +24,7 @@ public class BackgroundLoop : MonoBehaviour
 
     void Reposition()
     {
-        Vector2 offset = new Vector2(width * 2f, 0);
+        Vector2 offset = new Vector2(22.5f*width * 2f, 0);
         transform.position = (Vector2)transform.position + offset;
         
     }

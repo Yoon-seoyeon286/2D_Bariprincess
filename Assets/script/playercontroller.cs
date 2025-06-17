@@ -124,6 +124,7 @@ public class playercontroller : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         isDead = true;
 
+   animator.SetTrigger("Dead");
         SceneManager.LoadScene("01Scene");
     }
 
@@ -156,7 +157,7 @@ public class playercontroller : MonoBehaviour
             if (4 < AttackCount && AttackCount <= 6)
             {
                 hPBar.DamageHeart3();
-                animator.SetTrigger("Dead");
+             
                 Invoke("Die", 2.5f);
             }
         }
