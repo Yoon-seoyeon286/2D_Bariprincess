@@ -18,7 +18,6 @@ public class playercontroller : MonoBehaviour
 
     //HP
     int HP = 90;
-    public HPBar hPBar;
     int AttackCount = 0;
 
     //Attack
@@ -29,7 +28,7 @@ public class playercontroller : MonoBehaviour
     //etc
     Rigidbody2D rb;
     Animator animator;
-    public AudioClip deathclip;
+
 
     //Level
 
@@ -120,10 +119,10 @@ public class playercontroller : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         isDead = true;
         animator.SetTrigger("Dead");
-        Invoke("sceneLoad", 2f);
+        Invoke("sceneLoad", 1f);
     }
 
-    void sceneLoda()
+    void sceneLoad()
     {
         SceneManager.LoadScene("01Scene");
     }
@@ -144,22 +143,7 @@ public class playercontroller : MonoBehaviour
         {
             AttackCount++;
 
-            if (AttackCount <= 2)
-            {
-                hPBar.DamageHeart1();
-            }
-
-            if (2 < AttackCount && AttackCount <= 4)
-            {
-                hPBar.DamageHeart2();
-            }
-
-            if (4 < AttackCount && AttackCount <= 6)
-            {
-                hPBar.DamageHeart3();
-             
-                Invoke("Die", 2.5f);
-            }
+           
         }
     }
 
@@ -167,23 +151,6 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-    }
-
-    public void DealAttackDamage()
-    {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.5f);
-
-        foreach (Collider2D hit in hits)
-        {
-            if (hit.CompareTag("Enemy"))
-            {
-                Bee bee = hit.GetComponent<Bee>();
-                if (bee != null)
-                {
-                    bee.hitSlide(25);
-                }
-            }
-        }
     }
 
 

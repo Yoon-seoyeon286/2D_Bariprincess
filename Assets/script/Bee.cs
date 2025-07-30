@@ -8,7 +8,6 @@ public class Bee : MonoBehaviour
     public RawImage imgBar;
     int hp = 100;
 
-    Level level;
 
 
     void Start()
