@@ -22,8 +22,7 @@ public class playercontroller : MonoBehaviour
     UIGameManager UIManager;
 
     //Attack
-    Bee bee;
-    public GameObject bees;
+    
 
 
     //etc
@@ -42,7 +41,7 @@ public class playercontroller : MonoBehaviour
         HP = 90;
         AttackCount = 0;
 
-        bee = FindFirstObjectByType<Bee>();
+       
         UIManager = FindAnyObjectByType<UIGameManager>();
     }
 
@@ -145,6 +144,7 @@ public class playercontroller : MonoBehaviour
             AttackCount++;
 
             UIManager.Heart(AttackCount);
+
             if (AttackCount >= 6)
             {
                 Die();

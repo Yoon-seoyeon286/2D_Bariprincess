@@ -51,8 +51,10 @@ public class Bee : MonoBehaviour
 
     public void Die()
     {
-        gameObject.SetActive(false);
         UIManger.LevelSystem(5);
+        UIManger.ScoreSystem(10);
+        gameObject.SetActive(false);
+     
     }
 
 

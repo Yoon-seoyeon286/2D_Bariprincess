@@ -25,6 +25,12 @@ public class UIGameManager : MonoBehaviour
     public Image[] HeartImage; //HP
 
     public Text ScoreText; //score
+    int scoreNumber = 0;
+
+    private void Start()
+    {
+        scoreNumber = 0;
+    }
 
     public void Heart(int damageCount)
     {
@@ -54,5 +60,9 @@ public class UIGameManager : MonoBehaviour
         }
     }
 
+    public void ScoreSystem(int amount)
+    {
+        ScoreText.text = amount.ToString();
+    }
 }
 
