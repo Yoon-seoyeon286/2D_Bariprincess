@@ -19,6 +19,7 @@ public class playercontroller : MonoBehaviour
     //HP
     int HP = 90;
     int AttackCount = 0;
+    UIGameManager UIManager;
 
     //Attack
     Bee bee;
@@ -42,7 +43,7 @@ public class playercontroller : MonoBehaviour
         AttackCount = 0;
 
         bee = FindFirstObjectByType<Bee>();
-
+        UIManager = FindAnyObjectByType<UIGameManager>();
     }
 
 
@@ -136,13 +137,18 @@ public class playercontroller : MonoBehaviour
 
         if (collision.tag == "Finish") //골인하면 다음 씬
         {
-            SceneManager.LoadScene("02Scene");
+           
         }
 
         if (collision.tag == "Enemy") //닿으면 체력 감소
         {
             AttackCount++;
 
+            UIManager.Heart(AttackCount);
+            if (AttackCount >= 6)
+            {
+                Die();
+            }
            
         }
     }
