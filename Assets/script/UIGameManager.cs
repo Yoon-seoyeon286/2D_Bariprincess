@@ -20,6 +20,7 @@ public class UIGameManager : MonoBehaviour
 
 
     public Text LvText; //level
+    int LevelScore = 0;
 
     public Image[] HeartImage; //HP
 
@@ -41,6 +42,15 @@ public class UIGameManager : MonoBehaviour
         {
 
             HeartImage[2].fillAmount -= 0.5f;
+        }
+    }
+
+    public void LevelSystem(int Energy)
+    {
+        if (Energy % 10 == 0)
+        {
+            LevelScore++;
+            LvText.text = "Lv. " + LevelScore;
         }
     }
 

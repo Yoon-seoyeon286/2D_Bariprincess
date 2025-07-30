@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Bee : MonoBehaviour
 {
     Animator animator;
+    UIGameManager UIManger;
     public playercontroller player;
     public RawImage imgBar;
     int hp = 100;
@@ -12,6 +13,7 @@ public class Bee : MonoBehaviour
 
     void Start()
     {
+        UIManger = FindAnyObjectByType<UIGameManager>();
         animator = GetComponent<Animator>();
         hp = 100;
 
@@ -35,7 +37,7 @@ public class Bee : MonoBehaviour
         if (hp <= 0)
         {
             Die();
-   
+         
         }
     }
 
@@ -49,9 +51,8 @@ public class Bee : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
-       
-   
+        gameObject.SetActive(false);
+        UIManger.LevelSystem(5);
     }
 
 
