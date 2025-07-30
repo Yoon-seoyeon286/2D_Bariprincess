@@ -1,7 +1,3 @@
-using System.Security.Cryptography;
-using System.Xml.Serialization;
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -123,8 +119,12 @@ public class playercontroller : MonoBehaviour
        
         rb.linearVelocity = Vector2.zero;
         isDead = true;
+        animator.SetTrigger("Dead");
+        Invoke("sceneLoad", 2f);
+    }
 
-   animator.SetTrigger("Dead");
+    void sceneLoda()
+    {
         SceneManager.LoadScene("01Scene");
     }
 
