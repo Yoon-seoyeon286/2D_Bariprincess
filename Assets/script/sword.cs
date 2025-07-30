@@ -12,11 +12,8 @@ public class sword : MonoBehaviour
         UIManager = FindAnyObjectByType<UIGameManager>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void swordAttack()
     {
-        if(collision.CompareTag("Enemy"))
-        {
-            bee.hitSlide(20);
-        }
+        bee.hitSlide(25);
     }
 }
