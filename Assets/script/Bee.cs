@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bee : MonoBehaviour, IDamageable
+public class Bee : MonoBehaviour, IDamageable, IItemable
 {
     Animator animator;
     UIGameManager UIManger;
@@ -33,11 +33,10 @@ public class Bee : MonoBehaviour, IDamageable
     }
 
     public void Die()
-    {
+    { 
         UIManger.LevelSystem(5);
         UIManger.ScoreSystem(10);
         gameObject.SetActive(false);
-     
     }
 
 
@@ -58,5 +57,9 @@ public class Bee : MonoBehaviour, IDamageable
 
     }
 
+    public void itemDrop()
+    {
+        
+    }
 
 }
