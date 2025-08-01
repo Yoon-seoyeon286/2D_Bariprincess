@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bee : MonoBehaviour
+public class Bee : MonoBehaviour, IDamageable
 {
     Animator animator;
     UIGameManager UIManger;
@@ -24,23 +24,6 @@ public class Bee : MonoBehaviour
 
     }
 
-    public void hitSlide(int amount)
-    {
-        if (hp <= 0)
-        {
-            return;
-        }
-
-        hp -= amount;
-        imgBar.transform.localScale = new Vector3(0.4f*hp / 100f, 0.028f,1f);
-
-        if (hp <= 0)
-        {
-            Die();
-         
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -58,6 +41,22 @@ public class Bee : MonoBehaviour
     }
 
 
+    public void Damage(int damage)
+    {
+        if (hp <= 0)
+        {
+            return;
+        }
+
+        hp -= damage;
+        imgBar.transform.localScale = new Vector3(0.4f * hp / 100f, 0.028f, 1f);
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+
+    }
 
 
 }
