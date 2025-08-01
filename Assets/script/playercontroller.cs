@@ -22,7 +22,7 @@ public class playercontroller : MonoBehaviour
     UIGameManager UIManager;
 
     //Attack
-    sword sword;
+   
 
 
     //etc
@@ -44,7 +44,7 @@ public class playercontroller : MonoBehaviour
        
         UIManager = FindAnyObjectByType<UIGameManager>();
 
-        sword = GetComponentInChildren<sword>();
+    
     }
 
 
@@ -151,8 +151,6 @@ public class playercontroller : MonoBehaviour
             {
                 Die();
             }
-
-            animationAttackEvent(25);
         }
     }
 
@@ -162,12 +160,6 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-    }
-
-    public void animationAttackEvent(int damage)
-    {
-       Bee bee = FindAnyObjectByType<Bee>();
-        bee.hitSlide(damage);
     }
 
 

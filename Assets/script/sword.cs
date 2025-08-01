@@ -12,8 +12,11 @@ public class sword : MonoBehaviour
         UIManager = FindAnyObjectByType<UIGameManager>();
     }
 
-    public void swordAttack()
+
+    public void DealswordAttack(int damage)
     {
-        bee.hitSlide(25);
+        bee.hitSlide(damage);
     }
-}
+
+ 
+} 
