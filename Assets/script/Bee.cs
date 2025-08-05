@@ -37,6 +37,7 @@ public class Bee : MonoBehaviour, IDamageable, IItemable
         UIManger.LevelSystem(5);
         UIManger.ScoreSystem(10);
         gameObject.SetActive(false);
+        itemDrop();
     }
 
 
