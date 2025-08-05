@@ -24,14 +24,14 @@ public class Bee : MonoBehaviour, IDamageable, IItemable
 
     }
 
-/*    void OnTriggerEnter2D(Collider2D collision)
+   void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             animator.SetTrigger("Attack");
         }
     }
-*/
+
     public void Die()
     { 
         UIManger.LevelSystem(5);

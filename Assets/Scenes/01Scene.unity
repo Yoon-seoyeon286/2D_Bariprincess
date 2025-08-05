@@ -3073,6 +3073,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
     m_RemovedGameObjects: []
@@ -3309,6 +3321,18 @@ PrefabInstance:
     - target: {fileID: 7360914555629094934, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
@@ -6783,6 +6807,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
     m_RemovedGameObjects: []
@@ -7898,6 +7934,18 @@ PrefabInstance:
     - target: {fileID: 7360914555629094934, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
@@ -9030,6 +9078,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
     m_RemovedGameObjects: []
@@ -9448,6 +9508,18 @@ PrefabInstance:
     - target: {fileID: 7360914555629094934, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
@@ -18475,6 +18547,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 884498873}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35930,6 +36014,18 @@ PrefabInstance:
     - target: {fileID: 7360914555629094934, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 884498867}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987528304229437351, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
+      propertyPath: detectionRange
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 198556365271436112, guid: 2546a849b7bee4b51aca21d0574dbfd4, type: 3}
