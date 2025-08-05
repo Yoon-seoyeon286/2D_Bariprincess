@@ -20,7 +20,8 @@ public class UIGameManager : MonoBehaviour
 
 
     public Text LvText; //level
-    int LevelScore = 0;
+    int LevelScore = 1;
+    int ContainerLevelScore = 0;
 
     public Image[] HeartImage; //HP
 
@@ -53,7 +54,10 @@ public class UIGameManager : MonoBehaviour
 
     public void LevelSystem(int Energy)
     {
-        if (Energy % 10 == 0)
+        
+        ContainerLevelScore+= Energy;
+
+        if (ContainerLevelScore % 10 == 0)
         {
             LevelScore++;
             LvText.text = "Lv. " + LevelScore;
@@ -62,7 +66,10 @@ public class UIGameManager : MonoBehaviour
 
     public void ScoreSystem(int amount)
     {
-        ScoreText.text = amount.ToString();
+        
+        scoreNumber += amount;
+
+        ScoreText.text = scoreNumber.ToString();
     }
 }
 
