@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class sword : MonoBehaviour
+public class Sword : MonoBehaviour
 {
     UIGameManager UIManager;
     IDamageable currentTarget;
    [SerializeField] float attackRange = 3f;
+    public int plusDamage =0;
 
 
     private void Awake()
@@ -12,6 +13,8 @@ public class sword : MonoBehaviour
         UIManager = FindAnyObjectByType<UIGameManager>();
        
     }
+
+  
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -39,9 +42,13 @@ public class sword : MonoBehaviour
 
     public void SwordAttack(int damage)
     {
+        int totalDamage = 0;
+        totalDamage += damage;
+        totalDamage += plusDamage;
+
         if(currentTarget != null)
         {
-            currentTarget.Damage(damage);
+            currentTarget.Damage(totalDamage);
             currentTarget = null;
         }
     }

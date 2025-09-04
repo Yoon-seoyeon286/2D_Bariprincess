@@ -35,20 +35,32 @@ public class UIGameManager : MonoBehaviour
 
     public void Heart(int damageCount)
     {
-        if (damageCount <= 2)
+        int hearCount = 0;
+        hearCount += damageCount;
+
+        if (hearCount <= 2)
         {
             HeartImage[0].fillAmount -= 0.5f;
         }
 
-        if (2 < damageCount && damageCount <= 4)
+        if (2 < hearCount && hearCount <= 4)
         {
             HeartImage[1].fillAmount -= 0.5f;
         }
 
-        if (4 < damageCount && damageCount <= 6)
+        if (4 < hearCount && hearCount <= 6)
         {
 
             HeartImage[2].fillAmount -= 0.5f;
+        }
+
+        else if (hearCount < 0)
+        {
+            HeartImage[0].fillAmount = 1;
+            HeartImage[1].fillAmount = 1;
+            HeartImage[2].fillAmount = 1;
+
+            hearCount = 0;
         }
     }
 

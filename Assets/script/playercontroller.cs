@@ -1,5 +1,7 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 
 public class playercontroller : MonoBehaviour
@@ -18,7 +20,7 @@ public class playercontroller : MonoBehaviour
 
     //HP
     int HP = 90;
-    int AttackCount = 0;
+    public int AttackCount = 0;
     UIGameManager UIManager;
 
     //Attack
@@ -30,7 +32,15 @@ public class playercontroller : MonoBehaviour
     Animator animator;
 
 
-    //Level
+    //fire
+    public GameObject sideFire;
+    Sword sword;
+
+
+    private void Awake()
+    {
+        sword = GetComponent<Sword>();
+    }
 
 
     void Start()
@@ -141,8 +151,12 @@ public class playercontroller : MonoBehaviour
            
         }
 
-        if (collision.tag == "Enemy") //닿으면 체력 감소
-        {
+       
+    }
+
+    
+    public void PlayerDamage() { 
+      
             AttackCount++;
 
             UIManager.Heart(AttackCount);
@@ -151,7 +165,7 @@ public class playercontroller : MonoBehaviour
             {
                 Die();
             }
-        }
+        
     }
 
 
@@ -160,6 +174,19 @@ public class playercontroller : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
+    }
+
+    public IEnumerator OffFire()
+    {
+        yield return new WaitForSeconds(5f);
+        sideFire.SetActive(false);
+        sword.plusDamage = -20;
+
+    }
+    public void OnFire()
+    {
+        sideFire.SetActive(true);
+        sword.plusDamage = 20;
     }
 
 
